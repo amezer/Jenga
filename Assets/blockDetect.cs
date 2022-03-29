@@ -14,28 +14,11 @@ public class blockDetect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isFall();
+        //isFall();
     }
     
     public void addScore(){
         GameManager gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         gameManager.score += 1;
-    }
-    
-    public void isFall(){
-        GameManager gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        //Debug.Log(transform.position.y);
-        if(fall){
-            gameManager.fall = true;
-        }
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag.Equals("Plane") == true)
-        {
-            Debug.Log("fall");
-            fall = true;
-        }
     }
 }

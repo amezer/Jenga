@@ -38,4 +38,13 @@ public class changeVolume : MonoBehaviour
         timer.goTimer = true;
         timer.secondsCount = 0;
      }
+
+    public GameObject tower;
+
+    public void reset()
+    {
+        Destroy(GameObject.Find("Tower"));
+        Destroy(GameObject.FindWithTag("jenga"));
+        Instantiate(tower, new Vector3 (0.837f, 0.963f, 1.247f), Quaternion.identity);
+    }
 }

@@ -18,10 +18,13 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update(){
         if(fall){
-            Debug.Log("fall");
             Timer timer = GameObject.Find("Timer").GetComponent<Timer>();
             timer.goTimer = false;
+            fall = false;
         }
-        scoreText.text = "Score: " + score;
+        else
+        {
+            scoreText.text = "Score: " + score;
+        }
     }
 }
