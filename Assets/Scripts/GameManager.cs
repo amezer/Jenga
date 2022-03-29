@@ -5,14 +5,23 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    //public Slider volumeSlider;
+    public int score = 0;
+    public Text scoreText;
+    
+    public bool fall = false;
     // Start is called before the first frame update
     void Start()
     {
+        
     }
 
     // Update is called once per frame
     void Update(){
-        //AudioListener.volume = volumeSlider.value;
+        if(fall){
+            Debug.Log("fall");
+            Timer timer = GameObject.Find("Timer").GetComponent<Timer>();
+            timer.goTimer = false;
+        }
+        scoreText.text = "Score: " + score;
     }
 }

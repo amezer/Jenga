@@ -7,12 +7,15 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
     public Text timerText;
-    private float secondsCount;
+    public float secondsCount;
     private int minuteCount;
     private int hourCount;
+    public bool goTimer = true;
 
     void Update(){
-        UpdateTimerUI();
+        if(goTimer){
+            UpdateTimerUI();
+        }
     }
  //call this on update
     public void UpdateTimerUI(){

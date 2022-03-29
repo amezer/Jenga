@@ -27,4 +27,15 @@ public class changeVolume : MonoBehaviour
         AudioSource bgm = GameObject.Find("SoundEffect").GetComponent<AudioSource>();
         bgm.volume -= 0.1f;
     }
+
+    public void timerStop(){
+        Timer timer = GameObject.Find("Timer").GetComponent<Timer>();
+        timer.goTimer = false;
+     }
+
+     public void timerStart(){
+        Timer timer = GameObject.Find("Timer").GetComponent<Timer>();
+        timer.goTimer = true;
+        timer.secondsCount = 0;
+     }
 }
