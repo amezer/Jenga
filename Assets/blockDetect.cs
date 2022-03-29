@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class blockDetect : MonoBehaviour
 {
+    private bool fall = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,7 +14,7 @@ public class blockDetect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //isFall();
+        isFall();
     }
     
     public void addScore(){
@@ -23,9 +24,18 @@ public class blockDetect : MonoBehaviour
     
     public void isFall(){
         GameManager gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        Debug.Log(transform.position.y);
-        if(transform.position.y < -0.45f){
+        //Debug.Log(transform.position.y);
+        if(fall){
             gameManager.fall = true;
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag.Equals("Plane") == true)
+        {
+            Debug.Log("fall");
+            fall = true;
         }
     }
 }

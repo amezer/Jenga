@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571336, b: 0.3069219, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3651,19 +3651,7 @@ MonoBehaviour:
         m_CallState: 2
   onDetachedFromHand:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1067427976}
-        m_TargetAssemblyTypeName: blockDetect, Assembly-CSharp
-        m_MethodName: isFall
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1473837303
 GameObject:
   m_ObjectHideFlags: 0
@@ -5257,7 +5245,7 @@ GameObject:
   - component: {fileID: 1736419433}
   - component: {fileID: 1736419432}
   m_Layer: 0
-  m_Name: Plane (1)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
