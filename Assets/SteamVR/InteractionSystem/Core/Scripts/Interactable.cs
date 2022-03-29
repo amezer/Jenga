@@ -293,6 +293,8 @@ namespace Valve.VR.InteractionSystem
 
         protected float blendToPoseTime = 0.1f;
         protected float releasePoseBlendTime = 0.2f;
+        public AudioSource audioSource;
+        public AudioClip soundEffect;
 
         protected virtual void OnAttachedToHand(Hand hand)
         {
@@ -310,6 +312,7 @@ namespace Valve.VR.InteractionSystem
             }
 
             attachedToHand = hand;
+            audioSource.PlayOneShot(soundEffect);
         }
 
         protected virtual void OnDetachedFromHand(Hand hand)
